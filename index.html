@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capacity Graphics Designer Studio | Premium Design Agency in Arusha, Tanzania</title>
+    <meta name="description" content="Capacity Graphics Designer Studio — Arusha's premier graphic design agency. Branding, logos, print, web design, and more. Turning your vision into stunning visuals.">
+    <meta name="keywords" content="graphic design, Arusha, Tanzania, branding, logo design, print design, web design, creative agency">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Cursor glow effect -->
+    <div class="cursor-glow" id="cursorGlow"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">
+                <div class="logo-icon">
+                    <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="2" y="2" width="36" height="36" rx="8" stroke="url(#logoGrad)" stroke-width="3"/>
+                        <path d="M12 20C12 15.5817 15.5817 12 20 12V12C24.4183 12 28 15.5817 28 20V28H20C15.5817 28 12 24.4183 12 20V20Z" fill="url(#logoGrad)"/>
+                        <defs>
+                            <linearGradient id="logoGrad" x1="0" y1="0" x2="40" y2="40">
+                                <stop stop-color="#a855f7"/>
+                                <stop offset="1" stop-color="#6366f1"/>
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                </div>
+                <span class="logo-text">Capacity<span class="logo-accent">GDS</span></span>
+            </a>
+            <div class="nav-links" id="navLinks">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#services" class="nav-link">Services</a>
+                <a href="#portfolio" class="nav-link">Portfolio</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+            <a href="#contact" class="nav-cta">Get a Quote</a>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-bg">
+            <img src="hero-bg.png" alt="" class="hero-bg-img">
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="hero-particles" id="heroParticles"></div>
+        <div class="hero-content">
+            <div class="hero-badge">
+                <span class="badge-dot"></span>
+                Arusha's Premier Design Studio
+            </div>
+            <h1 class="hero-title">
+                We Design<br>
+                <span class="title-gradient">What Others</span><br>
+                Can Only Imagine
+            </h1>
+            <p class="hero-subtitle">
+                From bold branding to stunning visuals — we turn your ideas into 
+                designs that captivate, convert, and leave lasting impressions.
+            </p>
+            <div class="hero-actions">
+                <a href="#portfolio" class="btn btn-primary">
+                    <span>View Our Work</span>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </a>
+                <a href="tel:0675050966" class="btn btn-outline">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
+                    </svg>
+                    <span>Call Us Now</span>
+                </a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="stat-number" data-target="150">0</span><span class="stat-plus">+</span>
+                    <span class="stat-label">Projects Done</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat">
+                    <span class="stat-number" data-target="80">0</span><span class="stat-plus">+</span>
+                    <span class="stat-label">Happy Clients</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat">
+                    <span class="stat-number" data-target="5">0</span>
+                    <span class="stat-label">Years Experience</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat">
+                    <span class="stat-number">5.0</span>
+                    <span class="stat-label">⭐ Google Rating</span>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-line"></div>
+            <span>Scroll to explore</span>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">What We Do</span>
+                <h2 class="section-title">Services That <span class="text-gradient">Elevate</span> Your Brand</h2>
+                <p class="section-desc">Every design we create is crafted to make your business stand out in Arusha and beyond.</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card" data-service="1">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 48 48" fill="none">
+                            <circle cx="24" cy="24" r="20" stroke="url(#sGrad1)" stroke-width="2"/>
+                            <path d="M16 24l4-8h8l4 8-4 8h-8l-4-8z" fill="url(#sGrad1)" opacity="0.3"/>
+                            <path d="M16 24l4-8h8l4 8-4 8h-8l-4-8z" stroke="url(#sGrad1)" stroke-width="2"/>
+                            <defs><linearGradient id="sGrad1" x1="0" y1="0" x2="48" y2="48"><stop stop-color="#a855f7"/><stop offset="1" stop-color="#ec4899"/></linearGradient></defs>
+                        </svg>
+                    </div>
+                    <h3 class="service-title">Logo & Branding</h3>
+                    <p class="service-desc">Unique logo designs and complete branding packages that make your business unforgettable.</p>
+                    <ul class="service-features">
+                        <li>Custom Logo Design</li>
+                        <li>Brand Guidelines</li>
+                        <li>Business Cards</li>
+                        <li>Brand Strategy</li>
+                    </ul>
+                    <div class="service-price">From TSh 200,000</div>
+                </div>
+                <div class="service-card featured" data-service="2">
+                    <div class="featured-badge">Most Popular</div>
+                    <div class="service-icon">
+                        <svg viewBox="0 0 48 48" fill="none">
+                            <rect x="8" y="6" width="32" height="36" rx="4" stroke="url(#sGrad2)" stroke-width="2"/>
+                            <line x1="14" y1="16" x2="34" y2="16" stroke="url(#sGrad2)" stroke-width="2"/>
+                            <line x1="14" y1="22" x2="28" y2="22" stroke="url(#sGrad2)" stroke-width="2"/>
+                            <rect x="14" y="28" width="20" height="8" rx="2" fill="url(#sGrad2)" opacity="0.3"/>
+                            <defs><linearGradient id="sGrad2" x1="0" y1="0" x2="48" y2="48"><stop stop-color="#6366f1"/><stop offset="1" stop-color="#a855f7"/></linearGradient></defs>
+                        </svg>
+                    </div>
+                    <h3 class="service-title">Print Design</h3>
+                    <p class="service-desc">Eye-catching flyers, banners, posters, and marketing materials that get results.</p>
+                    <ul class="service-features">
+                        <li>Flyers & Brochures</li>
+                        <li>Banners & Posters</li>
+                        <li>Packaging Design</li>
+                        <li>Menu Design</li>
+                    </ul>
+                    <div class="service-price">From TSh 50,000</div>
+                </div>
+                <div class="service-card" data-service="3">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 48 48" fill="none">
+                            <rect x="4" y="8" width="40" height="28" rx="4" stroke="url(#sGrad3)" stroke-width="2"/>
+                            <line x1="16" y1="36" x2="32" y2="36" stroke="url(#sGrad3)" stroke-width="2" stroke-linecap="round"/>
+                            <circle cx="24" cy="22" r="6" fill="url(#sGrad3)" opacity="0.3"/>
+                            <defs><linearGradient id="sGrad3" x1="0" y1="0" x2="48" y2="48"><stop stop-color="#06b6d4"/><stop offset="1" stop-color="#6366f1"/></linearGradient></defs>
+                        </svg>
+                    </div>
+                    <h3 class="service-title">Website Design</h3>
+                    <p class="service-desc">Modern, responsive websites that look stunning and help your business grow online.</p>
+                    <ul class="service-features">
+                        <li>Responsive Websites</li>
+                        <li>Landing Pages</li>
+                        <li>E-commerce Sites</li>
+                        <li>SEO Optimization</li>
+                    </ul>
+                    <div class="service-price">From TSh 500,000</div>
+                </div>
+                <div class="service-card" data-service="4">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 48 48" fill="none">
+                            <rect x="12" y="4" width="24" height="40" rx="6" stroke="url(#sGrad4)" stroke-width="2"/>
+                            <circle cx="24" cy="38" r="2" fill="url(#sGrad4)"/>
+                            <rect x="16" y="10" width="16" height="22" rx="2" fill="url(#sGrad4)" opacity="0.15"/>
+                            <defs><linearGradient id="sGrad4" x1="0" y1="0" x2="48" y2="48"><stop stop-color="#f59e0b"/><stop offset="1" stop-color="#ef4444"/></linearGradient></defs>
+                        </svg>
+                    </div>
+                    <h3 class="service-title">Social Media</h3>
+                    <p class="service-desc">Scroll-stopping social media graphics that boost your engagement and followers.</p>
+                    <ul class="service-features">
+                        <li>Instagram Posts</li>
+                        <li>Facebook Covers</li>
+                        <li>Story Templates</li>
+                        <li>Ad Creatives</li>
+                    </ul>
+                    <div class="service-price">From TSh 30,000</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section class="portfolio" id="portfolio">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Our Work</span>
+                <h2 class="section-title">Projects That <span class="text-gradient">Speak</span> For Themselves</h2>
+                <p class="section-desc">Every project is a story of transformation — from concept to visual masterpiece.</p>
+            </div>
+            <div class="portfolio-showcase">
+                <div class="portfolio-main">
+                    <img src="portfolio.png" alt="Branding project showcase - business cards, logos, and marketing materials" class="portfolio-img">
+                    <div class="portfolio-overlay">
+                        <h3>Complete Branding Package</h3>
+                        <p>Logo, business cards, letterheads, and social media kit</p>
+                    </div>
+                </div>
+                <div class="portfolio-side">
+                    <div class="portfolio-item">
+                        <img src="workspace.png" alt="Creative design workspace at Capacity Graphics Studio" class="portfolio-img">
+                        <div class="portfolio-overlay">
+                            <h3>Our Creative Space</h3>
+                            <p>Where ideas come to life</p>
+                        </div>
+                    </div>
+                    <div class="portfolio-item portfolio-cta">
+                        <div class="portfolio-cta-content">
+                            <div class="cta-number">150+</div>
+                            <p>Projects completed for clients across Arusha and Tanzania</p>
+                            <a href="#contact" class="btn btn-small">Start Your Project →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="process">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">How We Work</span>
+                <h2 class="section-title">Simple Process, <span class="text-gradient">Stunning</span> Results</h2>
+            </div>
+            <div class="process-steps">
+                <div class="process-step">
+                    <div class="step-number">01</div>
+                    <div class="step-content">
+                        <h3>Discover</h3>
+                        <p>We listen to your vision, understand your business, and define the design goals together.</p>
+                    </div>
+                </div>
+                <div class="process-connector"></div>
+                <div class="process-step">
+                    <div class="step-number">02</div>
+                    <div class="step-content">
+                        <h3>Design</h3>
+                        <p>Our team creates multiple concepts, refining until we land on the perfect design for you.</p>
+                    </div>
+                </div>
+                <div class="process-connector"></div>
+                <div class="process-step">
+                    <div class="step-number">03</div>
+                    <div class="step-content">
+                        <h3>Refine</h3>
+                        <p>You review, we fine-tune. Unlimited revisions until you're 100% satisfied with the result.</p>
+                    </div>
+                </div>
+                <div class="process-connector"></div>
+                <div class="process-step">
+                    <div class="step-number">04</div>
+                    <div class="step-content">
+                        <h3>Deliver</h3>
+                        <p>You receive all files in every format you need — print-ready, web-optimized, and future-proof.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Client Love</span>
+                <h2 class="section-title">What Our <span class="text-gradient">Clients</span> Say</h2>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-text">"Excellence good and best company for the website design. They truly understand what you need and deliver beyond expectations."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">VM</div>
+                        <div>
+                            <strong>Victor Boniphace</strong>
+                            <span>Verified Google Review</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-text">"The branding package they created for my restaurant completely transformed how customers see us. Professional, fast, and affordable!"</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">AN</div>
+                        <div>
+                            <strong>Amina N.</strong>
+                            <span>Restaurant Owner, Arusha</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-text">"From logo to business cards to our full social media presence — Capacity handled everything. Highly recommend to any business in Arusha."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">JK</div>
+                        <div>
+                            <strong>Joseph K.</strong>
+                            <span>Tour Company, Kilimanjaro</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-content">
+                    <span class="section-tag">About Us</span>
+                    <h2 class="section-title">Arusha's Unique<br><span class="text-gradient">Graphics Design</span> Studio</h2>
+                    <p class="about-text">
+                        At Capacity Graphics Designer Studio, we believe every business deserves 
+                        world-class design — no matter the size. Based in the heart of Arusha, 
+                        we've helped over 80 businesses transform their visual identity and 
+                        stand out in the market.
+                    </p>
+                    <p class="about-text">
+                        Our mission is simple: to be the most unique and trusted graphics design 
+                        studio agency in our community. We don't just create designs — we create 
+                        experiences that make your brand unforgettable.
+                    </p>
+                    <div class="about-features">
+                        <div class="about-feature">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#a855f7" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                            <span>Fast Turnaround — Most projects in 2-5 days</span>
+                        </div>
+                        <div class="about-feature">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#a855f7" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                            <span>Unlimited Revisions — Until you love it</span>
+                        </div>
+                        <div class="about-feature">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#a855f7" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                            <span>Affordable Pricing — Quality without breaking the bank</span>
+                        </div>
+                        <div class="about-feature">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#a855f7" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                            <span>Open 7 AM – 10 PM, Monday to Sunday</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-visual">
+                    <div class="about-image-wrapper">
+                        <img src="workspace.png" alt="Capacity Graphics Studio workspace" class="about-image">
+                    </div>
+                    <div class="about-floating-card">
+                        <div class="floating-rating">5.0 ⭐</div>
+                        <span>Google Reviews</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <span class="section-tag">Get In Touch</span>
+                    <h2 class="section-title">Let's Create<br><span class="text-gradient">Something Amazing</span></h2>
+                    <p class="contact-desc">Ready to transform your brand? Reach out today and let's discuss your project. First consultation is always free!</p>
+                    
+                    <div class="contact-details">
+                        <a href="tel:0675050966" class="contact-item">
+                            <div class="contact-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <strong>Call Us</strong>
+                                <span>0675 050 966</span>
+                            </div>
+                        </a>
+                        <a href="mailto:barakandrw@gmail.com" class="contact-item">
+                            <div class="contact-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <strong>Email Us</strong>
+                                <span>barakandrw@gmail.com</span>
+                            </div>
+                        </a>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <strong>Visit Us</strong>
+                                <span>Sing'isi, Arusha, Tanzania</span>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <strong>Working Hours</strong>
+                                <span>Mon-Sun: 7:00 AM – 10:00 PM</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form-wrapper">
+                    <form class="contact-form" id="contactForm">
+                        <h3>Request a Free Quote</h3>
+                        <div class="form-group">
+                            <input type="text" id="formName" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" id="formPhone" placeholder="Phone Number" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="formEmail" placeholder="Email Address">
+                        </div>
+                        <div class="form-group">
+                            <select id="formService" required>
+                                <option value="" disabled selected>Select a Service</option>
+                                <option value="logo">Logo & Branding</option>
+                                <option value="print">Print Design</option>
+                                <option value="web">Website Design</option>
+                                <option value="social">Social Media Graphics</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="formMessage" placeholder="Tell us about your project..." rows="4"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-full" id="submitBtn">
+                            <span>Send Message</span>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/>
+                            </svg>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <a href="#" class="nav-logo">
+                        <div class="logo-icon">
+                            <svg viewBox="0 0 40 40" fill="none">
+                                <rect x="2" y="2" width="36" height="36" rx="8" stroke="url(#fLogoGrad)" stroke-width="3"/>
+                                <path d="M12 20C12 15.5817 15.5817 12 20 12V12C24.4183 12 28 15.5817 28 20V28H20C15.5817 28 12 24.4183 12 20V20Z" fill="url(#fLogoGrad)"/>
+                                <defs><linearGradient id="fLogoGrad" x1="0" y1="0" x2="40" y2="40"><stop stop-color="#a855f7"/><stop offset="1" stop-color="#6366f1"/></linearGradient></defs>
+                            </svg>
+                        </div>
+                        <span class="logo-text">Capacity<span class="logo-accent">GDS</span></span>
+                    </a>
+                    <p>Arusha's premier graphic design studio. Making businesses look amazing since day one.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <a href="#services">Services</a>
+                    <a href="#portfolio">Portfolio</a>
+                    <a href="#about">About</a>
+                    <a href="#contact">Contact</a>
+                </div>
+                <div class="footer-links">
+                    <h4>Services</h4>
+                    <a href="#services">Logo Design</a>
+                    <a href="#services">Print Design</a>
+                    <a href="#services">Web Design</a>
+                    <a href="#services">Social Media</a>
+                </div>
+                <div class="footer-links">
+                    <h4>Contact</h4>
+                    <a href="tel:0675050966">0675 050 966</a>
+                    <a href="mailto:barakandrw@gmail.com">barakandrw@gmail.com</a>
+                    <a href="#">Sing'isi, Arusha</a>
+                    <a href="#">Mon-Sun: 7AM-10PM</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Capacity Graphics Designer Studio. All Rights Reserved.</p>
+                <p class="footer-credit">Designed with 💜 in Arusha, Tanzania</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
