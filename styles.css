@@ -1306,6 +1306,7 @@ body:hover .cursor-glow {
     .solutions-item:hover .solutions-overlay {
         transform: none;
         opacity: 1;
+        min-height: 300px;
     }
     .testimonials-grid {
         grid-template-columns: 1fr;

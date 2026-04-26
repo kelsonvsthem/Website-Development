@@ -79,6 +79,7 @@ function createParticles() {
         particle.style.width = size + 'px';
         particle.style.height = size + 'px';
 
+        
         const colors = ['#d4af37', '#1e3a8a', '#1d4ed8'];
         particle.style.background = colors[Math.floor(Math.random() * colors.length)];
 
@@ -207,6 +208,45 @@ if (contactForm && submitBtn) {
         }, 3000);
     });
 }
+contactForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    
+    const name = document.getElementById('formName').value;
+    const phone = document.getElementById('formPhone').value;
+    const email = document.getElementById('formEmail').value;
+    const service = document.getElementById('formService').value;
+    const message = document.getElementById('formMessage').value;
+    
+    // Construct WhatsApp message
+    const whatsappMsg = encodeURIComponent(
+        `Hello AIMS Management Consultancy,\n\n` +
+        `My name is ${name}.\n` +
+        `I'm interested in: ${service}\n` +
+        `Phone: ${phone}\n` +
+        `${email ? 'Email: ' + email + '\n' : ''}` +
+        `${message ? '\nProject details:\n' + message : ''}\n\n` +
+        `Please contact me regarding consultancy support in Dubai.`
+    );
+    
+    // Show success state on button
+    const originalHTML = submitBtn.innerHTML;
+    submitBtn.innerHTML = `
+        <span>Message Sent! ✓</span>
+    `;
+    submitBtn.style.background = 'linear-gradient(135deg, #22c55e, #16a34a)';
+    submitBtn.disabled = true;
+    
+    // Open WhatsApp
+    window.open(`https://wa.me/971585187889?text=${whatsappMsg}`, '_blank');
+    
+    // Reset after 3 seconds
+    setTimeout(() => {
+        submitBtn.innerHTML = originalHTML;
+        submitBtn.style.background = '';
+        submitBtn.disabled = false;
+        contactForm.reset();
+    }, 3000);
+});
 
 // ===== SMOOTH SCROLL FOR ALL ANCHOR LINKS =====
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
