@@ -1,9 +1,11 @@
 // ===== CURSOR GLOW EFFECT =====
 const cursorGlow = document.getElementById('cursorGlow');
-document.addEventListener('mousemove', (e) => {
-    cursorGlow.style.left = e.clientX + 'px';
-    cursorGlow.style.top = e.clientY + 'px';
-});
+if (cursorGlow) {
+    document.addEventListener('mousemove', (e) => {
+        cursorGlow.style.left = e.clientX + 'px';
+        cursorGlow.style.top = e.clientY + 'px';
+    });
+}
 
 // ===== NAVBAR SCROLL =====
 const navbar = document.getElementById('navbar');
@@ -63,7 +65,9 @@ window.addEventListener('scroll', updateActiveNav);
 const particlesContainer = document.getElementById('heroParticles');
 
 function createParticles() {
-    for (let i = 0; i < 30; i++) {
+    if (!particlesContainer || window.innerWidth < 992) return;
+
+    for (let i = 0; i < 10; i++) {
         const particle = document.createElement('div');
         particle.className = 'particle';
         particle.style.left = Math.random() * 100 + '%';
@@ -74,7 +78,7 @@ function createParticles() {
         particle.style.width = size + 'px';
         particle.style.height = size + 'px';
         
-        const colors = ['#a855f7', '#6366f1', '#ec4899', '#06b6d4'];
+        const colors = ['#d4af37', '#1e3a8a', '#1d4ed8'];
         particle.style.background = colors[Math.floor(Math.random() * colors.length)];
         
         particlesContainer.appendChild(particle);
@@ -114,7 +118,7 @@ function animateCounters() {
 // ===== SCROLL REVEAL =====
 function addRevealClass() {
     const elements = document.querySelectorAll(
-        '.service-card, .portfolio-main, .portfolio-item, .portfolio-cta, ' +
+        '.service-card, .solutions-main, .solutions-item, .solutions-cta, ' +
         '.process-step, .testimonial-card, .about-content, .about-visual, ' +
         '.contact-info, .contact-form-wrapper, .section-header'
     );
@@ -150,24 +154,7 @@ const statsObserver = new IntersectionObserver((entries) => {
 const heroStats = document.querySelector('.hero-stats');
 if (heroStats) statsObserver.observe(heroStats);
 
-// ===== SERVICE CARDS TILT EFFECT =====
-document.querySelectorAll('.service-card').forEach(card => {
-    card.addEventListener('mousemove', (e) => {
-        const rect = card.getBoundingClientRect();
-        const x = e.clientX - rect.left;
-        const y = e.clientY - rect.top;
-        const centerX = rect.width / 2;
-        const centerY = rect.height / 2;
-        const rotateX = (y - centerY) / 20;
-        const rotateY = (centerX - x) / 20;
-        
-        card.style.transform = `translateY(-8px) perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
-    });
-    
-    card.addEventListener('mouseleave', () => {
-        card.style.transform = '';
-    });
-});
+// Service card tilt removed for cleaner corporate interaction
 
 // ===== CONTACT FORM =====
 const contactForm = document.getElementById('contactForm');
@@ -184,12 +171,13 @@ contactForm.addEventListener('submit', (e) => {
     
     // Construct WhatsApp message
     const whatsappMsg = encodeURIComponent(
-        `Hello Capacity Graphics! 👋\n\n` +
+        `Hello AIMS Management Consultancy,\n\n` +
         `My name is ${name}.\n` +
         `I'm interested in: ${service}\n` +
+        `Phone: ${phone}\n` +
         `${email ? 'Email: ' + email + '\n' : ''}` +
         `${message ? '\nProject details:\n' + message : ''}\n\n` +
-        `Looking forward to working with you!`
+        `Please contact me regarding consultancy support in Dubai.`
     );
     
     // Show success state on button
@@ -200,8 +188,13 @@ contactForm.addEventListener('submit', (e) => {
     submitBtn.style.background = 'linear-gradient(135deg, #22c55e, #16a34a)';
     submitBtn.disabled = true;
     
-    // Open WhatsApp
-    window.open(`https://wa.me/255675050966?text=${whatsappMsg}`, '_blank');
+    // Open WhatsApp (use same-tab on phones for better reliability)
+    const waUrl = `https://wa.me/971585187889?text=${whatsappMsg}`;
+    if (window.matchMedia('(max-width: 768px)').matches) {
+        window.location.href = waUrl;
+    } else {
+        window.open(waUrl, '_blank');
+    }
     
     // Reset after 3 seconds
     setTimeout(() => {
@@ -243,5 +236,5 @@ window.addEventListener('load', () => {
     document.body.classList.add('loaded');
 });
 
-console.log('🎨 Capacity Graphics Designer Studio - Website loaded successfully!');
-console.log('📧 Contact: barakandrw@gmail.com | 📞 0675 050 966');
+console.log('AIMS Management Consultancy website loaded successfully.');
+console.log('Contact: info@aimsmanagementconsultancy.com | +971 58 518 7889');
